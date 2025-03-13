@@ -1,10 +1,7 @@
 const express = require("express");
-const { getCategories, createCategory } = require("../controllers/categoryController");
-const { protect, admin } = require("../middlewares/authMiddleware");
-
+const {getAllCategory} = require("../controllers/categoryController");
 const router = express.Router();
 
-router.get("/", getCategories);
-router.post("/", protect, admin, createCategory);
+router.get("/", getAllCategory);
 
 module.exports = router;

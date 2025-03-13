@@ -3,12 +3,12 @@ const cors = require("cors");
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const productRoutes = require("./routes/productRoutes");
-const orderRoutes = require("./routes/orderRoutes");
-const paymentRoutes = require("./routes/paymentRoutes");
-const reviewRoutes = require("./routes/reviewRoutes");
-const couponRoutes = require("./routes/couponRoutes");
+// const orderRoutes = require("./routes/orderRoutes");
+// const paymentRoutes = require("./routes/paymentRoutes");
+// const reviewRoutes = require("./routes/reviewRoutes");
+// const couponRoutes = require("./routes/couponRoutes");
 const categoryRoutes = require("./routes/categoryRoutes");
-const wishlistRoutes = require("./routes/wishlistRoutes");
+// const wishlistRoutes = require("./routes/wishlistRoutes");
 const logger = require("./config/logger");
 const { errorHandler } = require("./middlewares/errorMiddleware");
 
@@ -40,13 +40,13 @@ app.use(cors(corsOptions));
 
 // Define routes
 app.use("/JinStore/auth", authRoutes);
-app.use("/JinStore/orders", orderRoutes);
+// app.use("/JinStore/orders", orderRoutes);
 app.use("/JinStore/products", productRoutes);
-app.use("/JinStore/payments", paymentRoutes);
-app.use("/JinStore/reviews", reviewRoutes);
-app.use("/JinStore/coupons", couponRoutes);
+// app.use("/JinStore/payments", paymentRoutes);
+// app.use("/JinStore/reviews", reviewRoutes);
+// app.use("/JinStore/coupons", couponRoutes);
 app.use("/JinStore/categories", categoryRoutes);
-app.use("/JinStore/wishlist", wishlistRoutes);
+// app.use("/JinStore/wishlist", wishlistRoutes);
 
 // Health check route
 app.get("/JinStore", (req, res) => {
