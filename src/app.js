@@ -49,7 +49,7 @@ app.use("/JinStore/categories", categoryRoutes);
 // app.use("/JinStore/wishlist", wishlistRoutes);
 
 // Health check route
-app.get("/JinStore", (req, res) => {
+app.get("/", (req, res) => {
   res.send("JinStore API is running...");
 });
 
