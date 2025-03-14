@@ -10,12 +10,11 @@ module.exports = {
       res.status(500).json({ message: error.message });
     }
   },
-  // Get products byID
+  // Get products by name
   getProductById: async(req, res) =>{
     try{
       const name = req.params.name;
-      const categories = req.params.category;
-      const product = await Product.find(name || categories);
+      const product = await Product.find(name);
       if(!product){
         return res.status(404).json({message:"Sản phẩm không tồn tại"})
       }
@@ -24,5 +23,6 @@ module.exports = {
       res.status(500).json({ message: error.message });
     }
   }
+
 
 }
