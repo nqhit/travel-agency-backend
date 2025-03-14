@@ -39,14 +39,14 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Define routes
-app.use("/auth", authRoutes);
-// app.use("/orders", orderRoutes);
-app.use("/products", productRoutes);
-// app.use("/payments", paymentRoutes);
-// app.use("/reviews", reviewRoutes);
-// app.use("/coupons", couponRoutes);
-app.use("/categories", categoryRoutes);
-// app.use("/wishlist", wishlistRoutes);
+app.use("/JinStore/auth", authRoutes);
+// app.use("/JinStore/orders", orderRoutes);
+app.use("/JinStore/products", productRoutes);
+// app.use("/JinStore/payments", paymentRoutes);
+// app.use("/JinStore/reviews", reviewRoutes);
+// app.use("/JinStore/coupons", couponRoutes);
+app.use("/JinStore/categories", categoryRoutes);
+// app.use("/JinStore/wishlist", wishlistRoutes);
 
 // Health check route
 app.get("/", (req, res) => {
